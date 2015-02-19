@@ -27,13 +27,23 @@ function require(...)
         local name = fs.getName(reqloc)
         if traversedir then
             file = traverse(fs.getDir(reqloc), name)
+            if not fs.exists(file) then
+	            if fs.exists(shell.resolveProgram(file))
+	                file = shell.resolveProgram(file)
+	            end
+		    end
         else
             file = reqloc
         end
-        os.loadAPI(file)
-        local api = _G[name]
-        _G[name] = nil
-        table.insert(apis, api)
+        if fs.exists(file) then
+            os.loadAPI(file)
+            local api = _G[name]
+            _G[name] = nil
+            table.insert(apis, api)
+        else
+            table.insert(apis, {})
+            error("Required API " .. name .. " not found!")
+        end
     end
     return unpack(apis)
 end
