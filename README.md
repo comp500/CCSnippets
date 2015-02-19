@@ -24,6 +24,9 @@ ComputerCraft 1.63 is required for the `fs.getDir` function, but if you do want 
     
     btn = require("button") -- Includes the button api
     btn.heading("Hello!") -- A function of the button api, adds a heading on an attached monitor
+    t = require("touchpoint").new() -- Includes the touchpoint api and creates a new instance of buttons, discarding the touchpoint api reference
+    t:add(...) -- Adds buttons
+    t:draw() -- Draws buttons
     disk = require(disk.getMountPath("left") .. "randomapi") -- Includes an api from the disk attached to the left
     disk.random()
 
