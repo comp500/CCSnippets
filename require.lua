@@ -13,7 +13,7 @@ function require(...)
         return file
     end
     local apis = {}
-    for i=0,select("#", ...) do
+    for i=1,select("#", ...) do
         local reqloc = select(i, ...)
         local traversedir = false
         if string.sub(reqloc, 1, 1) ~= "/" then
