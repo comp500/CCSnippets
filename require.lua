@@ -1,4 +1,5 @@
--- require for computercraft
+-- require() for CC by comp500
+-- MIT license - https://github.com/comp500/CCSnippets/
 function require(...)
     if select("#", ...) < 1 then
         return
