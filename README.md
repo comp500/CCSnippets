@@ -15,7 +15,7 @@ This snippet provides a require() function, very similar to CommonJS AMD module 
     module1, module2, module3... = require(location1, location2, location3...)
     
 This function takes the location of a lua file/module and gives you the namespace for that module. It uses os.loadAPI, so you do not have to modify APIs to use them. You can include as many modules at once, or just one.
-It is easy to use and only around 400B when minified. This snippet is designed to be inserted at the top of a file.
+It is easy to use and only around 600B when minified. This snippet is designed to be inserted at the top of a file.
 To find a module, specify it with no trailing slash (relative) and `require()` will look in the current directory and all directories above the current directory. If you include a trailing slash (absolute), `require()` will only look in the directory you specify.
 
 ComputerCraft 1.63 is required for the `fs.getDir` function, but if you do want to use it for earlier versions, you could write a replacement for `fs.getDir`, or find one.
