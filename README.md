@@ -9,6 +9,7 @@ The files are stored on the repository as .lua files. This is not the case for c
 
 ### require()
 *Requires ComputerCraft 1.63 or newer*
+Also available on CC forums [here](http://www.computercraft.info/forums2/index.php?/topic/22053-require-amd-for-cc-an-api-to-include-apis/).
 
 This snippet provides a require() function, very similar to CommonJS AMD module loading.
 
