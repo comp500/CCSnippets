@@ -6,7 +6,7 @@ function require(...)
     end
     local traverse = function (travDir, name)
         local file = travDir .. name
-        while (not fs.exists(file)) or travDir ~= "" do
+        while (not fs.exists(file)) and travDir ~= "" do
             travDir = fs.getDir(travDir)
             file = travDir .. name
         end
@@ -28,7 +28,7 @@ function require(...)
         if traversedir then
             file = traverse(fs.getDir(reqloc), name)
             if not fs.exists(file) then
-	            if fs.exists(shell.resolveProgram(file))
+	            if shell.resolveProgram(file) ~= nil and fs.exists(shell.resolveProgram(file)) then
 	                file = shell.resolveProgram(file)
 	            end
 		    end
