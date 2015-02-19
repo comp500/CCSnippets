@@ -26,3 +26,6 @@ ComputerCraft 1.63 is required for the `fs.getDir` function, but if you do want 
     btn.heading("Hello!") -- A function of the button api, adds a heading on an attached monitor
     disk = require(disk.getMountPath("left") .. "randomapi") -- Includes an api from the disk attached to the left
     disk.random()
+
+## To-Do list
+- Add support for shell.resolveProgram()
