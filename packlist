@@ -8,3 +8,14 @@ name = require-api
 	version = 0.1
 	size = 1
 end
+
+name = addrequire
+	type = raw
+		url = https://github.com/comp500/CCSnippets/raw/master/addrequire.lua
+		filename = addrequire
+	category = prepend require api
+	dependencies = require-api
+	target = /usr/bin
+	version = 0.1
+	size = 1
+end
