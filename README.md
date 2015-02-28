@@ -6,8 +6,9 @@ require is designed to be easily incorporated into the top of a CC program. In t
 The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded and added to your programs using `require()`.
 
 ### *new!* Packman Installation
-You can now use Packman, a package manager included in LyqydOS, to install my programs.
+~~You can now~~ You will be able to use Packman, a package manager included in LyqydOS, to install my programs [when it gets added](https://github.com/lyqyd/cc-packman/pull/10).
 Simply update your version of packman: `packman fetch` and install a program using `packman install <program>`.
+To update your packman programs, run `packman fetch update`.
 To add require to your programs, see below.
 
 ## Snippets
