@@ -3,7 +3,7 @@ Snippets of Lua that you can include in CC projects. These are available under t
 
 ## Usage
 require is designed to be easily incorporated into the top of a CC program. In this case, simply insert the code (smaller, minified code is available in releases) at the top of your program, ensuring the license is kept as a comment. This code will work in most recent versions of ComputerCraft, and with some modification, in generic Lua.
-The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded and added to your programs using `require()`.
+The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded (through a release or through Packman) and added to your programs using `require()`.
 
 ### *new!* Packman Installation
 ~~You can now~~ You will be able to use Packman, a package manager included in LyqydOS, to install my programs [when it gets added](https://github.com/lyqyd/cc-packman/pull/10).
