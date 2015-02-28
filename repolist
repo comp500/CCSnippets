@@ -1,1 +1,9 @@
-
+name = require-api
+	type = pastebin
+		url = G30mF044
+		filename = require
+	category = require api
+	dependencies = none
+	target = /usr/apis
+	version = 0.1
+end
