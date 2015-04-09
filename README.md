@@ -49,4 +49,6 @@ The packman package for this snippet is `addrequire`.
 It depends on `require`, so it will automatically be installed when you install addrequire.
 
 ## To-Do list
-- Add /usr/apis support
+- ~~Add /usr/apis support~~
+- Make new replacement for require called lib, that doesn't find apis, but installs them
+- Make new replacement for addrequire called addcode, that supports adding api code/require/lib to the top or bottom of your programs
