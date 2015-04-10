@@ -13,7 +13,10 @@ function lib(...)
                 table.insert(r,nil)
             end
         else
-            table.insert(r,file)
+            os.loadAPI(file)
+            local b = _G[v]
+            _G[v] = nil
+            table.insert(r,b)
         end
     end
     return unpack(r)
