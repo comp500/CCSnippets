@@ -8,7 +8,7 @@ function lib(...)
         if not file then
             local pm = s('packman') or s('ac-get')
             if http and pm then
-                term.write(v.." is required for this program. Would you like to install it [Y/n]:")
+                print(v.." is required for this program. Would you like to install it [Y/n]:")
                 if string.lower(read()) == 'n' then
                     printError("API "..v.." not installed")
                     table.insert(r,nil)
