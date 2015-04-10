@@ -48,7 +48,27 @@ This is a simple program that makes it easy to add require to a program. Simply 
 The packman package for this snippet is `addrequire`.
 It depends on `require`, so it will automatically be installed when you install addrequire.
 
+### lib()
+Also available on CC forums [here once I have edited it](http://www.computercraft.info/forums2/index.php?/topic/22053-require-amd-for-cc-an-api-to-include-apis/).
+
+This snippet provides a lib() function, very similar to CommonJS AMD module loading.
+
+    module1, module2, module3... = lib(location1, location2, location3...)
+    
+This function takes the name of a lua file/module and gives you the namespace for that module. It uses os.loadAPI, so you do not have to modify APIs to use them. You can include as many modules at once, or just one.
+It is easy to use and only around 900B when minified. This snippet is designed to be inserted at the top of a file.
+Simply specify the API's name, and it should be found. If it can't be found and the user has a http connection and a package manager, lib will ask the user if they want to try and install the API. In the future lib will also support direct loading from pastebin.
+
+#### Example usage
+    
+    btn = lib("button") -- Includes the button api
+    btn.heading("Hello!") -- A function of the button api, adds a heading on an attached monitor
+    t = lib("touchpoint").new() -- Includes the touchpoint api and creates a new instance of buttons, discarding the touchpoint api reference
+    t:add(...) -- Adds buttons
+    t:draw() -- Draws buttons
+    
+#### Packman
+The packman package for this snippet is `lib`.
+
 ## To-Do list
-- ~~Add /usr/apis support~~
-- Make new replacement for require called lib, that doesn't find apis, but installs them
 - Make new replacement for addrequire called addcode, that supports adding api code/require/lib to the top or bottom of your programs
