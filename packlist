@@ -19,3 +19,14 @@ name = addrequire
 	version = 0.1
 	size = 1
 end
+
+name = lib
+	type = pastebin
+		url = MZSSaAGc
+		filename = lib
+	category = lib api
+	dependencies = none
+	target = /usr/apis
+	version = 0.1
+	size = 1
+end
