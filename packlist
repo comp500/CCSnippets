@@ -1,4 +1,4 @@
-name = require-api
+name = require
 	type = pastebin
 		url = G30mF044
 		filename = require
@@ -14,7 +14,7 @@ name = addrequire
 		url = https://github.com/comp500/CCSnippets/raw/master/addrequire.lua
 		filename = addrequire
 	category = prepend require api
-	dependencies = require-api
+	dependencies = comp500/require
 	target = /usr/bin
 	version = 0.1
 	size = 1

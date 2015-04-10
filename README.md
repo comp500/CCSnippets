@@ -6,8 +6,8 @@ require is designed to be easily incorporated into the top of a CC program. In t
 The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded (through a release or through Packman) and added to your programs using `require()`.
 
 ### *new!* Packman Installation
-~~You can now~~ You will be able to use Packman, a package manager included in LyqydOS, to install my programs [when it gets added](https://github.com/lyqyd/cc-packman/pull/10).
-Simply update your version of packman: `packman fetch` and install a program using `packman install <program>`.
+You can now use Packman, [a package manager](http://www.computercraft.info/forums2/index.php?/topic/22268-packman-a-package-management-tool/page__view__findpost__p__208342) that is included in LyqydOS, to install my programs.
+Simply update your version of packman: `packman fetch` (If it gives an error, [run it again](https://github.com/lyqyd/cc-packman/issues/11). If that doesn't work, check your 'net connection and http api settings.) and install a program using `packman install <program>`.
 To update your packman programs, run `packman fetch update`.
 To add require to your programs, see below.
 
@@ -37,7 +37,7 @@ ComputerCraft 1.63 is required for the `fs.getDir` function, but if you do want 
     disk.random()
 
 #### Packman
-The packman package for this snippet is `require-api`.
+The packman package for this snippet is `require`.
 
 ### addrequire
 This is a simple program that makes it easy to add require to a program. Simply install it then run it for each of your files:
@@ -46,7 +46,9 @@ This is a simple program that makes it easy to add require to a program. Simply 
 
 #### Packman
 The packman package for this snippet is `addrequire`.
-It depends on `require-api`, so it will automatically be installed when you install addrequire.
+It depends on `require`, so it will automatically be installed when you install addrequire.
 
 ## To-Do list
-- What do you want me to add?
+- ~~Add /usr/apis support~~
+- Make new replacement for require called lib, that doesn't find apis, but installs them
+- Make new replacement for addrequire called addcode, that supports adding api code/require/lib to the top or bottom of your programs
