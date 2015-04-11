@@ -1,5 +1,5 @@
 # CCSnippets
-Snippets of Lua that you can include in CC projects. These are available under the permissive MIT license, so feel free to fork, send pull requests and include in your own Lua projects. The only requirement is that you credit me.
+Snippets of Lua that you can include in CC projects. These are available under the permissive MIT license, so feel free to fork, send pull requests and include in your own Lua projects. The only requirement is that you credit me. This excludes ccConfig, owned by theoriginalbit. The license is at the top of ccConfig. I'm just putting it here to host it, so it is available on packman.
 
 ## Usage
 require is designed to be easily incorporated into the top of a CC program. In this case, simply insert the code (smaller, minified code is available in releases) at the top of your program, ensuring the license is kept as a comment. This code will work in most recent versions of ComputerCraft, and with some modification, in generic Lua.
