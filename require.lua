@@ -1,6 +1,6 @@
 -- require() for CC by comp500
 -- MIT license - https://github.com/comp500/CCSnippets/
-function lib(...)
+function require(...)
     local c,r = fs.combine,{}
     local function fn(a) return fs.exists(a) and a or false end
     for i,v in ipairs(arg) do

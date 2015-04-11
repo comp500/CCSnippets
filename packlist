@@ -5,7 +5,7 @@ name = require
 	category = require api
 	dependencies = none
 	target = /usr/apis
-	version = 2
+	version = 2.01
 	size = 1
 end
 
