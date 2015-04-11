@@ -30,3 +30,14 @@ name = lib
 	version = 0.1
 	size = 1
 end
+
+name = ccConfig
+	type = raw
+		url = https://github.com/theoriginalbit/ccConfig/raw/master/ccConfig.lua
+		filename = ccConfig
+	category = configuration api
+	dependencies = none
+	target = /usr/apis
+	version = 0.1
+	size = 1
+end
