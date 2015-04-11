@@ -6,7 +6,7 @@ name = require
 	dependencies = none
 	target = /usr/apis
 	version = 2.01
-	size = 1
+	size = 425
 end
 
 name = addrequire
@@ -17,7 +17,7 @@ name = addrequire
 	dependencies = comp500/require
 	target = /usr/bin
 	version = 1
-	size = 1
+	size = 1003
 end
 
 name = lib
@@ -28,7 +28,7 @@ name = lib
 	dependencies = none
 	target = /usr/apis
 	version = 1
-	size = 1
+	size = 985
 end
 
 name = ccConfig
