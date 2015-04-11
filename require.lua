@@ -1,49 +1,19 @@
 -- require() for CC by comp500
 -- MIT license - https://github.com/comp500/CCSnippets/
-function require(...)
-    if select("#", ...) < 1 then
-        return
-    end
-    local traverse = function (travDir, name)
-        local file = travDir .. name
-        while (not fs.exists(file)) and travDir ~= "" do
-            travDir = fs.getDir(travDir)
-            file = travDir .. name
-        end
-        return file
-    end
-    local apis = {}
-    for i=1,select("#", ...) do
-        local reqloc = select(i, ...)
-        local traversedir = false
-        if string.sub(reqloc, 1, 1) ~= "/" then
-            traversedir = true
-            reqloc = fs.combine(fs.getDir(shell.getRunningProgram()), reqloc)
-        end
-        if fs.isDir(reqloc) then
-            return
-        end
-        local file = nil
-        local name = fs.getName(reqloc)
-        if traversedir then
-            file = traverse(fs.getDir(reqloc), name)
-            if not fs.exists(file) then
-	            if shell.resolveProgram(file) ~= nil and fs.exists(shell.resolveProgram(file)) then
-	                file = shell.resolveProgram(file)
-	            end
-		    end
+function lib(...)
+    local c,r = fs.combine,{}
+    local function fn(a) return fs.exists(a) and a or false end
+    for i,v in ipairs(arg) do
+        local file = fn(c('usr/apis',v)) or fn(v) or shell.resolveProgram(v)
+        if not file then
+            printError("API "..v.." not found")
+            table.insert(r,nil)
         else
-            file = reqloc
-        end
-        if fs.exists(file) then
             os.loadAPI(file)
-            local api = _G[name]
-            _G[name] = nil
-            table.insert(apis, api)
-        else
-            table.insert(apis, {})
-            error("Required API " .. name .. " not found!")
+            local b = _G[v]
+            _G[v] = nil
+            table.insert(r,b)
         end
     end
-    return unpack(apis)
+    return unpack(r)
 end
