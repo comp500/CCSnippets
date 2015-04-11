@@ -1,11 +1,11 @@
 name = require
 	type = pastebin
-		url = G30mF044
+		url = mM9N0hyv
 		filename = require
 	category = require api
 	dependencies = none
 	target = /usr/apis
-	version = 0.1
+	version = 0.2
 	size = 1
 end
 
