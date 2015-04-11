@@ -3,7 +3,7 @@ Snippets of Lua that you can include in CC projects. These are available under t
 
 ## Usage
 require is designed to be easily incorporated into the top of a CC program. In this case, simply insert the code (smaller, minified code is available in releases) at the top of your program, ensuring the license is kept as a comment. This code will work in most recent versions of ComputerCraft, and with some modification, in generic Lua.
-The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded (through a release or through Packman) and added to your programs using `require()`.
+The files are stored on the repository as .lua files. This is not the case for computercraft programs, so you will either have to remove the extension or download the release, which includes the programs without the extensions. Some of my other snippets can easily be downloaded (through a release or through Packman) and added to your programs using `require()` or `lib()`.
 
 ### *new!* Packman Installation
 You can now use Packman, [a package manager](http://www.computercraft.info/forums2/index.php?/topic/22268-packman-a-package-management-tool/page__view__findpost__p__208342) that is included in LyqydOS, to install my programs.
@@ -16,6 +16,8 @@ To add require to your programs, see below.
 ### require()
 *Requires ComputerCraft 1.63 or newer* - Also available on CC forums [here](http://www.computercraft.info/forums2/index.php?/topic/22053-require-amd-for-cc-an-api-to-include-apis/).
 
+*Outdated* see below for version 2
+
 This snippet provides a require() function, very similar to CommonJS AMD module loading.
 
     module1, module2, module3... = require(location1, location2, location3...)
@@ -25,6 +27,20 @@ It is easy to use and only around 600B when minified. This snippet is designed t
 To find a module, specify it with no trailing slash (relative) and `require()` will look in the current directory and all directories above the current directory. If you include a trailing slash (absolute), `require()` will only look in the directory you specify.
 
 ComputerCraft 1.63 is required for the `fs.getDir` function, but if you do want to use it for earlier versions, you could write a replacement for `fs.getDir`, or find one.
+
+#### require() Version 2
+Also available on CC forums [here when I update it](http://www.computercraft.info/forums2/index.php?/topic/22053-require-amd-for-cc-an-api-to-include-apis/).
+
+This snippet provides a require() function, very similar to CommonJS AMD module loading.
+
+    module1, module2, module3... = require(location1, location2, location3...)
+    
+This function takes the location of a lua file/module and gives you the namespace for that module. It uses os.loadAPI, so you do not have to modify APIs to use them. You can include as many modules at once, or just one. It is easy to use and only around 420B when minified. This snippet is designed to be inserted at the top of a file.
+
+By default `require()` (and by extension `lib()`) searches in the following locations:
+- /usr/apis/[name]
+- /[name]
+- shell.resolveProgram([name])
 
 #### Example usage
     
